@@ -16,18 +16,19 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-top: -100px;
+    margin-top: -180px;
     margin-left: 50px;
     color: #FFF;
     font-family: Roboto;
     font-weight: 300;
   }
   .message-box h1 {
-    font-size: 60px;
-    line-height: 46px;
+    font-size: 30px;
+    line-height: 28px;
     margin-bottom: 40px;
   }
   .message-box span {
+    font-size: 30px;
     --tw-text-opacity: 1;
     color: rgb(0 149 210 / var(--tw-text-opacity));
   }
