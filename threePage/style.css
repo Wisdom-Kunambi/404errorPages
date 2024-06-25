@@ -1,6 +1,6 @@
 body {
-    --tw-bg-opacity: 1;
-    background-color: rgb(12 32 47 / var(--tw-bg-opacity));
+    /* --tw-bg-opacity: 1;
+    background-color: rgb(12 32 47 / var(--tw-bg-opacity)); */
     font-family: 'Roboto', sans-serif;
   }
   svg {
@@ -18,7 +18,7 @@ body {
     left: 50%;
     margin-top: -180px;
     margin-left: 50px;
-    color: #FFF;
+    color: #000000;
     font-family: Roboto;
     font-weight: 300;
   }
@@ -29,15 +29,17 @@ body {
   }
   .message-box span {
     font-size: 30px;
-    --tw-text-opacity: 1;
-    color: rgb(0 149 210 / var(--tw-text-opacity));
+    /* --tw-text-opacity: 1;
+    color: rgb(0 149 210 / var(--tw-text-opacity)); */
+    color: #0DB04B;
   }
   .buttons-con .action-link-wrap {
     margin-top: 40px;
   }
   .buttons-con .action-link-wrap a {
-    --tw-bg-opacity: 1;
-    background-color: rgb(0 149 210 / var(--tw-bg-opacity));
+    /* --tw-bg-opacity: 1;
+    background-color: rgb(0 149 210 / var(--tw-bg-opacity)); */
+    background-color: #0DB04B;
     padding: 8px 25px;
     border-radius: 4px;
     color: #FFF;
@@ -49,8 +51,11 @@ body {
     margin-right: 10px
   }
   .buttons-con .action-link-wrap a:hover {
-    background-color: rgba(90, 92, 108, 0.5);
-    color: rgb(0 149 210 / var(--tw-bg-opacity));
+    /* background-color: rgba(90, 92, 108, 0.5);
+    color: rgb(0 149 210 / var(--tw-bg-opacity)); */
+    background-color: #FFF;
+    box-shadow: 10px 10px 5px lightblue;
+    color: #0DB04B;
   }
   
   #Polygon-1 , #Polygon-2 , #Polygon-3 , #Polygon-4 , #Polygon-4, #Polygon-5 {
