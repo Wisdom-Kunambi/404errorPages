@@ -7,7 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeSearchBtn = document.getElementById('closeSearchBtn');
     const searchResultsContainer = document.getElementById('searchResultsContainer');
 
-    let searchData = [];
+    // Define navigation items
+    const navItems = [
+        { Name: "Home", Description: "Return to the main page" },
+        { Name: "About", Description: "Learn more about our company" },
+        { Name: "Careers", Description: "View job opportunities" },
+        { Name: "Contacts", Description: "Get in touch with us" }
+    ];
 
     function showSearchIcon(evt) {
         if (searchWindow.style.opacity !== '1') {
@@ -52,17 +58,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateSearchResults() {
         const keyword = searchKeyword.value.toLowerCase();
-        const filteredData = searchData.filter(data =>
-            data.Name.toLowerCase().includes(keyword) ||
-            data.Description.toLowerCase().includes(keyword)
+        const filteredItems = navItems.filter(item =>
+            item.Name.toLowerCase().includes(keyword) ||
+            item.Description.toLowerCase().includes(keyword)
         );
 
-        searchResultsContainer.innerHTML = filteredData.map(data => `
+        searchResultsContainer.innerHTML = filteredItems.map(item => `
             <div class="search-window-container">
                 <div class="search-window-title">
-                    <a href="#">${data.Name}</a>
+                    <a href="#${item.Name.toLowerCase()}">${item.Name}</a>
                 </div>
-                <div class="search-window-content">${data.Description}</div>
+                <div class="search-window-content">${item.Description}</div>
             </div>
         `).join('');
     }
@@ -75,15 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
     searchResultsContainer.addEventListener('scroll', searchWindowScroll);
     searchKeyword.addEventListener('input', updateSearchResults);
 
-    // Fetch search data
-    fetch("https://assets.codepen.io/430361/animal_information.json", {
-        cache: "no-cache"
-    })
-    .then(response => response.json())
-    .then(data => {
-        searchData = data;
-    })
-    .catch(error => {
-        console.error('Error fetching search data:', error);
-    });
+    // Initial population of search results
+    updateSearchResults();
 });
