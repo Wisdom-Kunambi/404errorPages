@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeSearchBtn = document.getElementById('closeSearchBtn');
     const searchResultsContainer = document.getElementById('searchResultsContainer');
 
-    // Define navigation items
+    
     const navItems = [
-        { Name: "Home", Description: "Return to the main page" },
-        { Name: "About", Description: "Learn more about our company" },
-        { Name: "Careers", Description: "View job opportunities" },
-        { Name: "Contacts", Description: "Get in touch with us" }
+        { Name: "Home", Description: "Return to the main page", Link: "/" },
+        { Name: "About", Description: "Learn more about our company", Link: "/about" },
+        { Name: "Careers", Description: "View job opportunities", Link: "/careers" },
+        { Name: "Contacts", Description: "Get in touch with us", Link: "/contacts" }
     ];
 
     function showSearchIcon(evt) {
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         );
 
         searchResultsContainer.innerHTML = filteredItems.map(item => `
-            <div class="search-window-container" onclick="window.location.href='#${item.Name.toLowerCase()}'">
+            <div class="search-window-container" onclick="window.location.href='${item.Link}'">
                 <div class="search-window-title">
                     ${item.Name}
                 </div>
@@ -81,6 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
     searchResultsContainer.addEventListener('scroll', searchWindowScroll);
     searchKeyword.addEventListener('input', updateSearchResults);
 
-    // Initial population of search results
+   
     updateSearchResults();
 });
