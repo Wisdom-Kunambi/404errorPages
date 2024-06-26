@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     const navItems = [
-        { Name: "Home", Description: "Return to the main page", Link: "/" },
-        { Name: "About", Description: "Learn more about our company", Link: "/about" },
-        { Name: "Careers", Description: "View job opportunities", Link: "/careers" },
-        { Name: "Contacts", Description: "Get in touch with us", Link: "/contacts" }
+        { Name: "Home", Description: "Return to the main page", Link: "https://smartnology.co.tz" },
+        { Name: "About", Description: "Learn more about our company", Link: "https://smartnology.co.tz/about" },
+        { Name: "Careers", Description: "View job opportunities", Link: "https://smartnology.co.tz/careers" },
+        { Name: "Contacts", Description: "Get in touch with us", Link: "https://smartnology.co.tz/contacts" }
     ];
 
     function showSearchIcon(evt) {
