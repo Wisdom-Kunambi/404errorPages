@@ -64,9 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
         );
 
         searchResultsContainer.innerHTML = filteredItems.map(item => `
-            <div class="search-window-container">
+            <div class="search-window-container" onclick="window.location.href='#${item.Name.toLowerCase()}'">
                 <div class="search-window-title">
-                    <a href="#${item.Name.toLowerCase()}">${item.Name}</a>
+                    ${item.Name}
                 </div>
                 <div class="search-window-content">${item.Description}</div>
             </div>

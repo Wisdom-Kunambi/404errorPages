@@ -46,29 +46,76 @@ body {
     animation-iteration-count: infinite;
 }
 
-.error-code span:nth-child(1) { animation-name: error-code-1; }
-.error-code span:nth-child(2) { animation-name: error-code-2; }
-.error-code span:nth-child(3) { animation-name: error-code-3; }
+.error-code span:nth-child(1) {
+    animation-name: error-code-1;
+}
+
+.error-code span:nth-child(2) {
+    animation-name: error-code-2;
+}
+
+.error-code span:nth-child(3) {
+    animation-name: error-code-3;
+}
 
 @keyframes error-code-1 {
-    0%, 100% { transform: translateY(0); }
-    25% { transform: translateY(-1vmin); }
-    50% { transform: translateY(0); }
-    75% { transform: translateY(1vmin); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-1vmin);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(1vmin);
+    }
 }
 
 @keyframes error-code-2 {
-    0%, 100% { transform: translateY(0); }
-    25% { transform: translateY(1vmin); }
-    50% { transform: translateY(0); }
-    75% { transform: translateY(-1vmin); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(1vmin);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(-1vmin);
+    }
 }
 
 @keyframes error-code-3 {
-    0%, 100% { transform: translateY(0); }
-    25% { transform: translateY(-1vmin); }
-    50% { transform: translateY(0); }
-    75% { transform: translateY(1vmin); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-1vmin);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(1vmin);
+    }
 }
 
 .error-title {
@@ -103,7 +150,7 @@ body {
     box-shadow: -0.32rem 0.32rem 0.64rem rgba(31, 31, 31, 0.8);
     pointer-events: none;
     transition: top 32ms cubic-bezier(0.22, 0.61, 0.36, 1),
-                left 32ms cubic-bezier(0.22, 0.61, 0.36, 1);
+        left 32ms cubic-bezier(0.22, 0.61, 0.36, 1);
     opacity: 0;
 }
 
@@ -179,14 +226,14 @@ body {
     cursor: pointer;
 }
 
-.search-window-search button[type="button"] > span {
+.search-window-search button[type="button"]>span {
     width: 100%;
     height: 100%;
     display: block;
     position: relative;
 }
 
-.search-window-search button[type="button"] > span > span {
+.search-window-search button[type="button"]>span>span {
     content: "";
     background-color: #000000;
     width: 1.6rem;
@@ -197,15 +244,15 @@ body {
     border-radius: 0.1rem;
 }
 
-.search-window-search button[type="button"] > span > span:nth-child(1) {
+.search-window-search button[type="button"]>span>span:nth-child(1) {
     transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.search-window-search button[type="button"] > span > span:nth-child(2) {
+.search-window-search button[type="button"]>span>span:nth-child(2) {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.search-window-search button[type="button"]:hover > span {
+.search-window-search button[type="button"]:hover>span {
     transform: scale(1.2);
 }
 
@@ -219,7 +266,10 @@ body {
 .search-window-container {
     padding: 0.8rem 0.8rem;
     transition: background-color 150ms ease-out;
+    cursor: pointer;  
+    user-select: none;
 }
+
 
 .search-window-container:hover {
     background-color: rgba(0, 0, 0, 0.1);
@@ -227,6 +277,7 @@ body {
 
 .search-window-title {
     padding: 0.4rem 0.8rem;
+    font-weight: bold; 
 }
 
 .search-window-title a {
