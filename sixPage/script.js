@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const leftLeg = document.querySelector('.astronaut__leg-left');
   const rightLeg = document.querySelector('.astronaut__leg-right');
   let posX = window.innerWidth / 2;
-  let posY = window.innerHeight / 2;
+  let posY = window.innerHeight * 0.2;
   let angle = 0;
   let scale = 1.2;
   
@@ -68,27 +68,27 @@ document.addEventListener('DOMContentLoaded', function() {
     y2Forward ? y2 += 1 : y2 -= 1;
     y3Forward ? y3 += 1 : y3 -= 1;
 
-    // Astronaut movement
-    posX = window.innerWidth / 2 + Math.cos(angle) * 100;
-    posY = window.innerHeight / 2 + Math.sin(angle) * 50;
-    angle += 0.02;
-    scale = 1.2 + Math.sin(angle * 2) * 0.1;
-
-    astronaut.style.transform = `translate(${posX}px, ${posY}px) rotate(${angle * 10}deg) scale(${scale})`;
-
-    // Arm and leg swinging
-    const armAngle = Math.sin(angle * 2) * 15;
-    const legAngle = Math.sin(angle * 2) * 10;
-    
-    leftArm1.style.transform = `rotate(${-30 + armAngle}deg)`;
-    leftArm2.style.transform = `rotate(${-10 + armAngle}deg)`;
-    rightArm1.style.transform = `rotate(${-10 - armAngle}deg)`;
-    rightArm2.style.transform = `rotate(${10 - armAngle}deg)`;
-    
-    leftLeg.style.transform = `rotate(${legAngle}deg)`;
-    rightLeg.style.transform = `rotate(${-legAngle}deg)`;
-  }
-  
-  drawVisor();
-  animate();
-});
+     // Astronaut movement
+     posX = window.innerWidth / 2 + Math.cos(angle) * 100;
+     posY = window.innerHeight * 0.2 + Math.sin(angle) * 30; 
+     angle += 0.02;
+     scale = 1.2 + Math.sin(angle * 2) * 0.1;
+ 
+     astronaut.style.transform = `translate(${posX}px, ${posY}px) rotate(${angle * 10}deg) scale(${scale})`;
+ 
+     // Arm and leg swinging
+     const armAngle = Math.sin(angle * 2) * 15;
+     const legAngle = Math.sin(angle * 2) * 10;
+     
+     leftArm1.style.transform = `rotate(${-30 + armAngle}deg)`;
+     leftArm2.style.transform = `rotate(${-10 + armAngle}deg)`;
+     rightArm1.style.transform = `rotate(${-10 - armAngle}deg)`;
+     rightArm2.style.transform = `rotate(${10 - armAngle}deg)`;
+     
+     leftLeg.style.transform = `rotate(${legAngle}deg)`;
+     rightLeg.style.transform = `rotate(${-legAngle}deg)`;
+   }
+   
+   drawVisor();
+   animate();
+ });

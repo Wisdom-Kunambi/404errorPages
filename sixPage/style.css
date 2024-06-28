@@ -3,7 +3,6 @@ body {
     height: 100%;
     width: 100%;
     margin: 0px;
-    /* background: linear-gradient(90deg, #2f3640 23%, #181b20 100%); */
     --tw-bg-opacity: 1;
     background-color: rgb(12 32 47 / var(--tw-bg-opacity));
 }
@@ -157,24 +156,12 @@ body {
 }
 
 
-/* .astronaut {
-    position: absolute;
-    width: 185px;
-    height: 300px;
-    left: 70%;
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(20deg) scale(1.2);
-} */
-
 .astronaut {
     position: absolute;
-    width: 185px;
-    height: 300px;
-    left: 50%;
-    top: 50%;
+    top: 1%; 
+    left: 2%;
     transform: translate(-50%, -50%);
-    transition: transform 0.1s ease-out;
-}
+  }
 
 .astronaut__head {
     --tw-bg-opacity: 1;
