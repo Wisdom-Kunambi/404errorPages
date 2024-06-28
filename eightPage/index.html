@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                <img src="image/1.png" alt="computer crash">
+                <img id="fly-image" src="image/1.png" alt="computer crash">
             </div>
             <div class="col">
                 <div class="message-box">
@@ -31,6 +31,27 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+        const img = document.getElementById('fly-image');
+        let directionX = 1;
+        let directionY = 1;
+        let posX = 50;
+        let posY = 50;
+
+        function moveImage() {
+            posX += directionX * 5;
+            posY += directionY * 5;
+
+            if (posX > 50 || posX < 10) directionX *= -1;
+            if (posY > 50 || posY < 10) directionY *= -1;
+
+            img.style.transform = `translate(${posX}%, ${posY}%)`;
+        }
+
+        setInterval(moveImage, 100);
+    </script>
 </body>
 
 </html>
