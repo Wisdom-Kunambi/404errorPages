@@ -1,0 +1,59 @@
+body {
+    --tw-bg-opacity: 1;
+    background-color: rgb(12 32 47 / var(--tw-bg-opacity));
+}
+
+.message-box {
+    height: 200px;
+    width: 380px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -180px;
+    margin-left: 50px;
+    color: #ffffff;
+    font-family: Roboto;
+    font-weight: 300;
+  }
+  .message-box h1 {
+    font-size: 30px;
+    line-height: 28px;
+    margin-bottom: 40px;
+  }
+  .message-box span {
+    font-size: 30px;
+    --tw-text-opacity: 1;
+    color: rgb(0 149 210 / var(--tw-text-opacity));
+  }
+  .buttons-con .action-link-wrap {
+    margin-top: 40px;
+  }
+  .buttons-con .action-link-wrap a {
+    border: none;
+    background-color: #ffffff;
+    padding: 8px 25px;
+    border-radius: 4px;
+    --tw-bg-opacity: 1;
+    color: rgb(0 149 210 / var(--tw-bg-opacity));
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  .buttons-con .action-link-wrap a:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 149 210 / var(--tw-bg-opacity));
+    box-shadow: 10px 10px 5px lightblue;
+    color: #ffffff;
+  }
+
+  @media (max-width: 450px) {
+    img {
+    
+    }
+    .message-box {
+    
+    }
+ }
