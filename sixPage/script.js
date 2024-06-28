@@ -32,8 +32,14 @@ document.addEventListener('DOMContentLoaded', function() {
   let y2Forward = false;
   let y3Forward = true;
   
-  // New variables for astronaut movement
+  // Variables for astronaut movement and parts
   const astronaut = document.querySelector('.astronaut');
+  const leftArm1 = document.querySelector('.astronaut__arm-left1');
+  const leftArm2 = document.querySelector('.astronaut__arm-left2');
+  const rightArm1 = document.querySelector('.astronaut__arm-right1');
+  const rightArm2 = document.querySelector('.astronaut__arm-right2');
+  const leftLeg = document.querySelector('.astronaut__leg-left');
+  const rightLeg = document.querySelector('.astronaut__leg-right');
   let posX = window.innerWidth / 2;
   let posY = window.innerHeight / 2;
   let angle = 0;
@@ -51,41 +57,36 @@ document.addEventListener('DOMContentLoaded', function() {
     ctx.lineWidth = 8;
     ctx.stroke();
    
-    if (y1 === 100) {
-      y1Forward = true;
-    }
-    
-    if (y1 === 300) {
-      y1Forward = false;
-    }
-    
-    if (y2 === 100) {
-      y2Forward = true;
-    }
-    
-    if (y2 === 310) {
-      y2Forward = false;
-    }
-    
-    if (y3 === 100) {
-      y3Forward = true;
-    }
-    
-    if (y3 === 317) {
-      y3Forward = false;
-    }
+    if (y1 === 100) y1Forward = true;
+    if (y1 === 300) y1Forward = false;
+    if (y2 === 100) y2Forward = true;
+    if (y2 === 310) y2Forward = false;
+    if (y3 === 100) y3Forward = true;
+    if (y3 === 317) y3Forward = false;
     
     y1Forward ? y1 += 1 : y1 -= 1;
     y2Forward ? y2 += 1 : y2 -= 1;
     y3Forward ? y3 += 1 : y3 -= 1;
 
-    // New code for astronaut movement
+    // Astronaut movement
     posX = window.innerWidth / 2 + Math.cos(angle) * 100;
     posY = window.innerHeight / 2 + Math.sin(angle) * 50;
     angle += 0.02;
     scale = 1.2 + Math.sin(angle * 2) * 0.1;
 
     astronaut.style.transform = `translate(${posX}px, ${posY}px) rotate(${angle * 10}deg) scale(${scale})`;
+
+    // Arm and leg swinging
+    const armAngle = Math.sin(angle * 2) * 15;
+    const legAngle = Math.sin(angle * 2) * 10;
+    
+    leftArm1.style.transform = `rotate(${-30 + armAngle}deg)`;
+    leftArm2.style.transform = `rotate(${-10 + armAngle}deg)`;
+    rightArm1.style.transform = `rotate(${-10 - armAngle}deg)`;
+    rightArm2.style.transform = `rotate(${10 - armAngle}deg)`;
+    
+    leftLeg.style.transform = `rotate(${legAngle}deg)`;
+    rightLeg.style.transform = `rotate(${-legAngle}deg)`;
   }
   
   drawVisor();

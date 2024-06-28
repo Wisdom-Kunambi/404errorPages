@@ -167,7 +167,7 @@ body {
 } */
 
 .astronaut {
-    /* position: absolute; */
+    position: absolute;
     width: 185px;
     height: 300px;
     left: 50%;
@@ -409,4 +409,10 @@ body {
     border-top-left-radius: 8em;
     border-top-right-radius: 8em;
     border-bottom: 4px solid #ffffff;
+}
+
+.astronaut__arm-left1, .astronaut__arm-left2, 
+.astronaut__arm-right1, .astronaut__arm-right2, 
+.astronaut__leg-left, .astronaut__leg-right {
+  transition: transform 0.1s ease-out;
 }
