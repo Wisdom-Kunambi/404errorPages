@@ -1,4 +1,5 @@
-function drawVisor() {
+document.addEventListener('DOMContentLoaded', function() {
+  function drawVisor() {
     const canvas = document.getElementById('visor');
     const ctx = canvas.getContext('2d');
     
@@ -31,6 +32,13 @@ function drawVisor() {
   let y2Forward = false;
   let y3Forward = true;
   
+  // New variables for astronaut movement
+  const astronaut = document.querySelector('.astronaut');
+  let posX = window.innerWidth / 2;
+  let posY = window.innerHeight / 2;
+  let angle = 0;
+  let scale = 1.2;
+  
   function animate() {
     requestAnimationFrame(animate);
     ctx.clearRect(0, 0, innerWidth, innerHeight);
@@ -43,7 +51,6 @@ function drawVisor() {
     ctx.lineWidth = 8;
     ctx.stroke();
    
-    
     if (y1 === 100) {
       y1Forward = true;
     }
@@ -71,7 +78,16 @@ function drawVisor() {
     y1Forward ? y1 += 1 : y1 -= 1;
     y2Forward ? y2 += 1 : y2 -= 1;
     y3Forward ? y3 += 1 : y3 -= 1;
+
+    // New code for astronaut movement
+    posX = window.innerWidth / 2 + Math.cos(angle) * 100;
+    posY = window.innerHeight / 2 + Math.sin(angle) * 50;
+    angle += 0.02;
+    scale = 1.2 + Math.sin(angle * 2) * 0.1;
+
+    astronaut.style.transform = `translate(${posX}px, ${posY}px) rotate(${angle * 10}deg) scale(${scale})`;
   }
   
   drawVisor();
   animate();
+});

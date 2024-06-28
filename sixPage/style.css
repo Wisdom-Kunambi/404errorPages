@@ -157,13 +157,23 @@ body {
 }
 
 
-.astronaut {
+/* .astronaut {
     position: absolute;
     width: 185px;
     height: 300px;
     left: 70%;
     top: 50%;
     transform: translate(-50%, -50%) rotate(20deg) scale(1.2);
+} */
+
+.astronaut {
+    /* position: absolute; */
+    width: 185px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out;
 }
 
 .astronaut__head {
