@@ -1,0 +1,251 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #app {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .error-container {
+    --tw-bg-opacity: 1;
+    background-color: rgb(12 32 47 / var(--tw-bg-opacity));
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .error-code {
+    color: #ffffff;
+    font-family: "Fredoka One", cursive;
+    font-size: 24vmin;
+    text-align: center;
+    text-shadow: 1.6vmin 1.6vmin rgb(0, 195, 248);
+    user-select: none;
+    padding: 1.5vmin 5vmin;
+    display: flex;
+  }
+  
+  .error-code span {
+    font-weight: bold;
+    display: block;
+    animation-duration: 600ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .error-code span:nth-child(1) {
+    animation-name: error-code-1;
+  }
+  
+  .error-code span:nth-child(2) {
+    animation-name: error-code-2;
+  }
+  
+  .error-code span:nth-child(3) {
+    animation-name: error-code-3;
+  }
+  
+  .error-code span:nth-child(4) {
+    animation-name: error-code-4;
+  }
+  
+  .error-code span:nth-child(5) {
+    animation-name: error-code-5;
+  }
+  
+  .error-code span:nth-child(6) {
+    animation-name: error-code-6;
+  }
+  
+  @keyframes error-code-1 {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+  
+    25% {
+      transform: translateY(-1vmin);
+    }
+  
+    50% {
+      transform: translateY(0);
+    }
+  
+    75% {
+      transform: translateY(1vmin);
+    }
+  }
+  
+  @keyframes error-code-2 {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+  
+    25% {
+      transform: translateY(1vmin);
+    }
+  
+    50% {
+      transform: translateY(0);
+    }
+  
+    75% {
+      transform: translateY(-1vmin);
+    }
+  }
+  
+  @keyframes error-code-3 {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+  
+    25% {
+      transform: translateY(-1vmin);
+    }
+  
+    50% {
+      transform: translateY(0);
+    }
+  
+    75% {
+      transform: translateY(1vmin);
+    }
+  }
+  
+  @keyframes error-code-4 {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+  
+    25% {
+      transform: translateY(1vmin);
+    }
+  
+    50% {
+      transform: translateY(0);
+    }
+  
+    75% {
+      transform: translateY(-1vmin);
+    }
+  }
+  
+  @keyframes error-code-5 {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+  
+    25% {
+      transform: translateY(-1vmin);
+    }
+  
+    50% {
+      transform: translateY(0);
+    }
+  
+    75% {
+      transform: translateY(1vmin);
+    }
+  }
+  
+  @keyframes error-code-6 {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+  
+    25% {
+      transform: translateY(1vmin);
+    }
+  
+    50% {
+      transform: translateY(0);
+    }
+  
+    75% {
+      transform: translateY(-1vmin);
+    }
+  }
+  
+  
+  
+  .error-title {
+    color: #ffffff;
+    font-family: "Fredoka One", cursive;
+    font-size: 2.4rem;
+    text-align: center;
+    text-shadow: 0.186667rem 0.186667rem rgba(48, 48, 48, 0.5);
+    /* user-select: none; */
+    padding: 1.5vmin 10vmin;
+    width: 50%;
+  }
+  
+  .error-message {
+      --tw-bg-opacity: 1;
+      color: rgb(0 149 210 / var(--tw-bg-opacity));
+    font-family: "Fredoka One", cursive;
+    font-size: 1.2rem;
+    text-align: center;
+    text-shadow: 0.08rem 0.08rem rgba(48, 48, 48, 0.5);
+    /* user-select: none; */
+    padding: 1.5vmin 30vmin;
+  }
+
+
+.error__button {
+    margin-top: 3em;
+    border: none;
+    background-color: #ffffff;
+    padding: 8px 25px;
+    border-radius: 4px;
+    --tw-bg-opacity: 1;
+    color: rgb(0 149 210 / var(--tw-bg-opacity));
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.error__button:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 149 210 / var(--tw-bg-opacity));
+    box-shadow: 10px 10px 5px lightblue;
+    color: #ffffff;
+}
+
+#loading-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00acfb;
+    font-size: 2rem;
+    font-family: 'Fredoka One', cursive;
+    z-index: 9999;
+    color: #ffffff;
+}
+
+ 
