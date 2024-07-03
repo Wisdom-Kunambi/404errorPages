@@ -1,18 +1,16 @@
 (function() {
   "use strict";
     
-  let tl = gsap.timeline({repeat: -1, repeatDelay: 1}),
+  let tl = gsap.timeline(),  // Removed repeat and repeatDelay
      labels = document.getElementsByClassName("labels"),
      rocket = document.querySelectorAll(".rocket__body, .rocket__wing, .rocket__fire"),
      smokeL = document.querySelectorAll(".rocket__smoke--left"),
      smokeR = document.querySelectorAll(".rocket__smoke--right"),
      fire = document.getElementsByClassName("rocket__fire");
   
-  
   let cdStart = 1.25, cdLeave = cdStart / 2,
       esDuration = 0.10, esRepeat = 15,
       smDuration = 1.5;
-  
   
   tl.addLabel("countdown")
       .from(labels, {
@@ -32,7 +30,6 @@
       .from(rocket, {
         duration: esDuration,
         x: "+=3px",
-        repeat: esRepeat,
       }, "engine-start-=.5")
       .from(rocket, {
         duration: esDuration * 20,
@@ -64,19 +61,7 @@
       .to(fire, {
         duration: .25,
         scale: 2,
-      }, "lift-off-=1")  
-    .addLabel("launch")
-      .to(rocket, {
-        duration: 0.7,
-        y: () => "-=" + (document.body.offsetHeight) + "px",
-        ease: "power4.in",
-      }, "launch-=0.5")
-      .to(fire, {
-        duration: .25,
-        scale: 1.75,
-        repeat: 10,
-      }, "launch-=1.8")  
-    ;
+      }, "lift-off-=1");
 
 })();
 
