@@ -1,50 +1,62 @@
 body {
-    width: 100vw;
-    height: 100vh;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-  }
-  
-  #app {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    /* overflow: hidden; */
-  }
-  
-  .error-container {
-    --tw-bg-opacity: 1;
-    background-color: rgb(12 32 47 / var(--tw-bg-opacity));
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  .error-code {
-    color: #ffffff;
-    font-family: "Fredoka One", cursive;
-    font-size: 24vmin;
-    text-align: center;
-    text-shadow: 1.6vmin 1.6vmin rgb(0, 195, 248);
-    user-select: none;
-    padding: 1.5vmin 5vmin;
-    display: flex;
-  }
-  
-  .error-code span {
-    font-weight: bold;
-    display: block;
-    animation-duration: 600ms;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
+  width: 100vw;
+  height: 100vh;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.error-container {
+  --tw-bg-opacity: 1;
+  background-color: rgb(12 32 47 / var(--tw-bg-opacity));
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.col img {
+  max-width: 100%;
+  height: auto;
+}
+
+.error-code {
+  color: #ffffff;
+  font-family: "Fredoka One", cursive;
+  font-size: 15vmin;
+  text-align: center;
+  text-shadow: 1vmin 1vmin rgb(0, 195, 248);
+  user-select: none;
+  padding: 1.5vmin 5vmin;
+  display: flex;
+}
+
+.error-code span {
+  font-weight: bold;
+  display: block;
+  animation-duration: 600ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
   
   .error-code span:nth-child(1) {
     animation-name: error-code-1;
@@ -189,29 +201,26 @@ body {
   .error-title {
     color: #ffffff;
     font-family: "Fredoka One", cursive;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     text-align: center;
     text-shadow: 0.186667rem 0.186667rem rgba(48, 48, 48, 0.5);
-    /* user-select: none; */
-    padding: 1.5vmin 10vmin;
-    width: 70%;
+    padding: 1.5vmin 5vmin;
+    width: 100%;
     margin-bottom: 0.5em;
-  }
-  
-  .error-message {
-      --tw-bg-opacity: 1;
-      color: rgb(0 149 210 / var(--tw-bg-opacity));
+}
+
+.error-message {
+    --tw-bg-opacity: 1;
+    color: rgb(0 149 210 / var(--tw-bg-opacity));
     font-family: "Fredoka One", cursive;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     text-shadow: 0.08rem 0.08rem rgba(48, 48, 48, 0.5);
-    /* user-select: none; */
-    padding: 1.5vmin 30vmin;
-  }
-
+    padding: 1.5vmin 5vmin;
+}
 
 .error__button {
-    margin-top: 3em;
+    margin-top: 2em;
     border: none;
     background-color: #ffffff;
     padding: 8px 25px;
@@ -223,59 +232,89 @@ body {
     transition: all 0.3s linear;
     cursor: pointer;
     text-decoration: none;
-    margin-right: 10px;
 }
 
 .error__button:hover {
     --tw-bg-opacity: 1;
     background-color: rgb(0 149 210 / var(--tw-bg-opacity));
-    box-shadow: 10px 10px 5px lightblue;
+    box-shadow: 5px 5px 5px lightblue;
     color: #ffffff;
 }
 
 #loading-screen {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
-  z-index: 9999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    z-index: 9999;
 }
 
 .loading-circle {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 149 210 / var(--tw-bg-opacity));
-  animation: colorChange 1s infinite;
-}
-
-@keyframes bounce {
-  from {
-      transform: translateY(0);
-  }
-  to {
-      transform: translateY(-10px);
-  }
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 149 210 / var(--tw-bg-opacity));
+    animation: colorChange 1s infinite;
 }
 
 @keyframes colorChange {
-  0% {
-    --tw-bg-opacity: 1;
-    background-color: rgb(0 149 210 / var(--tw-bg-opacity));
-  }
-  50% {
-      background-color: white;
-  }
-  100% {
-    --tw-bg-opacity: 1;
-    background-color: rgb(0 149 210 / var(--tw-bg-opacity));
-  }
+    0% {
+        --tw-bg-opacity: 1;
+        background-color: rgb(0 149 210 / var(--tw-bg-opacity));
+    }
+    50% {
+        background-color: white;
+    }
+    100% {
+        --tw-bg-opacity: 1;
+        background-color: rgb(0 149 210 / var(--tw-bg-opacity));
+    }
+}
+
+@media (min-width: 768px) {
+    .row {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .error-code {
+        font-size: 24vmin;
+    }
+
+    .error-title {
+        font-size: 2.4rem;
+        width: 70%;
+    }
+
+    .error-message {
+        font-size: 1.2rem;
+        padding: 1.5vmin 30vmin;
+    }
+}
+
+@media (max-width: 480px) {
+    .error-code {
+        font-size: 12vmin;
+    }
+
+    .error-title {
+        font-size: 1.5rem;
+    }
+
+    .error-message {
+        font-size: 0.9rem;
+    }
+
+    .error__button {
+        font-size: 12px;
+        padding: 6px 20px;
+    }
 }
 
  
