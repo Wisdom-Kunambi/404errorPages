@@ -20,18 +20,29 @@ body {
     gap: 12%;
   }
   
-  .sagSign404 {
+  @keyframes swing {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(3deg); }
+    40% { transform: rotate(-3deg); }
+    60% { transform: rotate(2deg); }
+    80% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.sagSign404 {
     width: 100%;
     max-width: 380px;
     height: auto;
     overflow: hidden;
-  }
-  
-  .sagSign404 img {
+    animation: swing 10s ease-in-out infinite;
+    transform-origin: top center;
+}
+
+.sagSign404 img {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
-  }
+}
   
   .message-box {
     text-align: center;
