@@ -1,0 +1,156 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(20, 23, 24, 1);
+  }
+  
+  .sagSection {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 12%;
+  }
+  
+  .sagSign404 {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .sagSign404 img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .message-box {
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-family: Roboto;
+    font-weight: 300;
+    max-width: 380px;
+    width: 100%;
+  }
+  
+  .message-box h1 {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  
+  .message-box p {
+    color: rgba(124, 131, 133, 1);
+  }
+  
+  .message-box span {
+    color: #0db04b;
+  }
+  
+  /* For Buttons Only */
+  :root {
+    --bc: rgba(255, 203, 41, 1);
+    --fc: rgba(16, 18, 19, 1);
+  }
+  
+  .buttons-con .action-link-wrap {
+    margin-top: 20px;
+  }
+  
+  .buttons-con .action-link-wrap a {
+    background: no-repeat center
+      radial-gradient(circle at center, var(--bc) 0% 50%, var(--fc) 50% 100%);
+    background-color: var(--fc);
+    color: var(--fc);
+    padding: 8px 25px;
+    border-radius: 6px;
+    background-size: 200%;
+    box-shadow: 0 0 0 4px var(--bc) inset;
+    transition: background-size 0.5s ease, transform 0.3s ease, color 0.3s ease,
+      box-shadow 0.3s ease;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .buttons-con .action-link-wrap a:hover {
+    background-size: 0%;
+    color: var(--bc);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 4px var(--bc);
+  }
+  
+  /* for Responsiveness */
+  @media (min-width: 768px) {
+    .sagSection {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .sagSign404 {
+      margin-right: 0;
+    }
+  
+    .message-box {
+      text-align: left;
+    }
+  
+    .message-box h1 {
+      font-size: 30px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .sagSection {
+      gap: 20px;
+    }
+  
+    .sagSign404 {
+      max-width: 280px;
+    }
+  
+    .message-box h1 {
+      font-size: 22px;
+    }
+  
+    .message-box p {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sagSection {
+      padding: 10px;
+    }
+  
+    .sagSign404 {
+      max-width: 200px;
+    }
+  
+    .message-box h1 {
+      font-size: 20px;
+    }
+  
+    .message-box p {
+      font-size: 12px;
+    }
+  
+    .buttons-con .action-link-wrap a {
+      font-size: 12px;
+      padding: 6px 20px;
+    }
+  }
+  
